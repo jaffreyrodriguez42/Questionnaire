@@ -34,10 +34,10 @@ class QuestionnaireController extends Controller
 
     }
 
-    public function show($id)
+    public function show(Questionnaire $questionnaire)
     {
-    	$questionnaire = Questionnaire::findOrFail($id);
-    	
+    	// $questionnaire = Questionnaire::findOrFail($id); 	
     	return view('questionnaire.show', compact('questionnaire'));
+        
     }
 }
