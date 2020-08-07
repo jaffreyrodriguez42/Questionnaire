@@ -37,6 +37,8 @@ class QuestionnaireController extends Controller
     public function show(Questionnaire $questionnaire)
     {
     	// $questionnaire = Questionnaire::findOrFail($id); 	
+        $questionnaire->load('questions.answers');
+        // dd($questionnaire);
     	return view('questionnaire.show', compact('questionnaire'));
         
     }

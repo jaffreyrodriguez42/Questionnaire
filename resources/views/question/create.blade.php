@@ -13,7 +13,7 @@
 
                    		<div class="form-group">
                    		    <label for="question">Question</label>
-                   		    <input name="question[question]" type="text" class="form-control" id="question" aria-describedby="questionHelp" placeholder="Enter Question" value="{{ old('question.question') }}">
+                   		    <input name="question[question]" type="text" class="form-control" id="question" aria-describedby="questionHelp" placeholder="Enter Question" value="{{ old('question.question') }}" autocomplete="off">
                    		    <small id="questionHelp" class="form-text text-muted">Ask simple and to-the-point question for best results.</small>
                    		    @error('question.question')
                    		        <div class="alert alert-danger">{{ $message }}</div>
@@ -28,7 +28,7 @@
                               <div>
                                   <div class="form-group">
                                        <label for="answer1">Choice 1</label>
-                                       <input name="answers[][answer]" type="text" class="form-control" id="answer1" aria-describedby="choicesHelp" placeholder="Enter Choice 1" value="{{ old('answers.0.answer') }}">
+                                       <input name="answers[][answer]" type="text" class="form-control" id="answer1" aria-describedby="choicesHelp" placeholder="Enter Choice 1" value="{{ old('answers.0.answer') }}" autocomplete="off">
                       
                                        @error('answers.0.answer')
                                            <div class="alert alert-danger">{{ $message }}</div>
@@ -39,7 +39,7 @@
                               <div>
                                   <div class="form-group">
                                        <label for="answer2">Choice 2</label>
-                                       <input name="answers[][answer]" type="text" class="form-control" id="answer2" aria-describedby="choicesHelp" placeholder="Enter Choice 2" value="{{ old('answers.1.answer') }}">
+                                       <input name="answers[][answer]" type="text" class="form-control" id="answer2" aria-describedby="choicesHelp" placeholder="Enter Choice 2" value="{{ old('answers.1.answer') }}" autocomplete="off">
                               
                                        @error('answers.1.answer')
                                            <div class="alert alert-danger">{{ $message }}</div>
@@ -50,7 +50,7 @@
                               <div>
                                   <div class="form-group">
                                        <label for="answer3">Choice 3</label>
-                                       <input name="answers[][answer]" type="text" class="form-control" id="answer3" aria-describedby="choicesHelp" placeholder="Enter Choice 3" value="{{ old('answers.2.answer') }}">
+                                       <input name="answers[][answer]" type="text" class="form-control" id="answer3" aria-describedby="choicesHelp" placeholder="Enter Choice 3" value="{{ old('answers.2.answer') }}" autocomplete="off">
                               
                                        @error('answers.2.answer')
                                            <div class="alert alert-danger">{{ $message }}</div>
@@ -61,7 +61,7 @@
                               <div>
                                   <div class="form-group">
                                        <label for="answer4">Choice 4</label>
-                                       <input name="answers[][answer]" type="text" class="form-control" id="answer4" aria-describedby="choicesHelp" placeholder="Enter Choice 4" value="{{ old('answers.3.answer') }}">
+                                       <input name="answers[][answer]" type="text" class="form-control" id="answer4" aria-describedby="choicesHelp" placeholder="Enter Choice 4" value="{{ old('answers.3.answer') }}" autocomplete="off">
                               
                                        @error('answers.3.answer')
                                            <div class="alert alert-danger">{{ $message }}</div>
