@@ -29,6 +29,8 @@ Route::get('/questionnaires/{questionnaire}', 'QuestionnaireController@show');
 
 Route::get('/questionnaires/{questionnaire}/questions/create', 'QuestionController@create');
 
+Route::delete('/questionnaires/{questionnaire}/questions/{question}', 'QuestionController@destroy');
+
 Route::post('questionnaires/{questionnaire}/questions', 'QuestionController@store');
 
 Route::get('surveys/{questionnaire}-{slug}', 'SurveyController@show');
