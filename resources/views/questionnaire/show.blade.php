@@ -20,10 +20,20 @@
                 <div class="card-body">
                     <ul class="list-group">
                         @foreach($question->answers as $answer)
-                        <li class="list-group-item">{{ $answer->answer }}</li>
+                            <li class="list-group-item d-flex justify-content-between">{{ $answer->answer }}
+                               {{--  <div>{{ $answer->responses()->count()}}</div> --}}
+                               @if($question->responses()->count() != 0)
+                                <div class="">{{ intval(($answer->responses()->count() / $question->responses()->count()) * 100)}}%</div>
+                                @endif
+                            </li>       
                         @endforeach
                     </ul>
+
+
                 </div>
+
+
+
 
                 <div class="card-footer">
                     <form action="/questionnaires/{{ $questionnaire->id }}/questions/{{ $question->id }}" method="post">
@@ -36,6 +46,18 @@
             </div>
             @endforeach
 
+            <div class="mt-5">
+                {{ $questionnaire->surveys()->count()}} people took the survey.
+                <ul class="list-group">
+                    @foreach( $questionnaire->surveys as $survey)
+                        <li class="list-group-item">{{ $survey->name}}
+                            <div>
+                                {{ $survey->email}}
+                            </div>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
         </div>
     </div>
 </div>

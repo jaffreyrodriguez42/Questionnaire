@@ -26,6 +26,8 @@ class SurveyController extends Controller
         $survey = $questionnaire->surveys()->create($validatedData['survey']);
         $survey->responses()->createMany($validatedData['responses']);
 
-        return 'Thank you';  	
+        // return 'Thank you';  	
+
+        return redirect($questionnaire->path());
     }
 }
